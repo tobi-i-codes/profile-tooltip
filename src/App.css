@@ -1,0 +1,124 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+.animated-tooltip {
+  display: flex;
+  flex-direction: row;
+}
+.tooltip-item {
+  position: relative;
+  margin-right: -16px;
+  cursor: pointer;
+}
+.tooltip-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid white;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+.tooltip-item:hover .tooltip-image {
+  transform: scale(1.05);
+  z-index: 30;
+}
+.tooltip-content {
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.6);
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 50;
+  pointer-events: none;
+}
+.tooltip-item:hover .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+.tooltip-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.tooltip-designation {
+  font-size: 12px;
+}
+.tooltip-decoration {
+  position: absolute;
+  bottom: -1px;
+  left: 40px;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #0ea5e9, transparent);
+}
+.tooltip-decoration::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -40px;
+  width: 20%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #10b981, transparent);
+}
